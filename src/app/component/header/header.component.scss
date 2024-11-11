@@ -1,0 +1,41 @@
+.navbar {
+    padding: .5rem 2rem;
+    background: var(--color-gradient);
+    box-shadow: 0 0 30px rgb(0 0 0 / 50%)
+}
+
+.logo {
+    width: 17vh;
+    height: 7vh;
+    // font-size: 20px;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    object-position: center;
+    mix-blend-mode: color-burn;
+}
+
+.nav-link {
+    color: #66483b !important;
+    transition: .3s
+}
+
+.nav-link:hover {
+    color: #000 !important
+}
+
+.fa-solid.fa-bars {
+    color: #000;
+    font-size: 25px
+}
+
+.icont {
+    color: #000 !important;
+    transition: .3s;
+    border: none;
+}
+
+.icont:hover {
+    color: #000 !important;
+    background-color: white;
+    font-size: 16px;
+}

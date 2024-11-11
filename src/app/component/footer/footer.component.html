@@ -1,0 +1,75 @@
+<div class="footer pt-5 pb-3 text-dark-75 text-center text-md-start" *ngIf="showFooter">
+    <div class="container">
+        <ngx-spinner bdColor = "rgba(212,169,90,0.4)" size = "medium" color = "#070707"  type="ball-atom">
+            <p style="font-size: 20px; color: white"> Loading...</p>
+        </ngx-spinner>
+        <div class="row">
+            <!-- Logo and Info Section -->
+            <div class="col-md-6 col-lg-4">
+                <div class="info mb-5 text-col">
+                    <a class="navbar-brand" href="/">
+                        <img src="./assests/199962250.png" alt="Logo" class="logo mb-3">
+                    </a>
+                    <p class="mb-5">
+                        Sell your Herfa products and join our community of creators and buyers.
+                    </p>
+                    <div>&copy; 2024  Herfa Platform - All Rights Reserved</div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-1">
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="col-md-6 col-lg-2">
+                <div class="links">
+                    <h5 class="text-col">Quick Links</h5>
+                    <ul class="list-unstyled lh-lg">
+                        <li class="link"><a (click)=" openSpinner1()"  routerLink="/home">Home</a></li>
+                        <li class="link"><a (click)=" openSpinner1()" routerLink="/products">Shop</a></li>
+                        <li class="link"><a (click)=" openSpinner1()" routerLink="/about-us">About Us</a></li>
+                        <li class="link"><a (click)=" openSpinner1()" routerLink="/privacy-policy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Resources Section -->
+            <div class="col-md-6 col-lg-1">
+
+            </div>
+
+            <!-- Contact Us Section -->
+            <div class="col-md-6 col-lg-4 text-col">
+                <div class="contact">
+                    <h5>Contact Us</h5>
+                    <p class="lh-lg mt-3 mb-5">
+                        Have questions? Get in touch with us to learn more about how you can start selling your Herfa
+                        products today!
+                    </p>
+                    <ul class="d-flex mt-5 list-unstyled gap-4">
+                        <li class="col-sm-2">
+                            <a class="d-block text-light text-center" target="_blank" href="https://www.youtube.com/">
+                                <i class="fa-brands fa-youtube rounded-circle p-3"></i>
+                            </a>
+                        </li>
+                        <li class="col-sm-2">
+                            <a class="d-block text-light text-center" target="_blank" href="https://www.facebook.com/">
+                                <i class="fa-brands fa-facebook rounded-circle p-3"></i>
+                            </a>
+                        </li>
+                        <li class="col-sm-2">
+                            <a class="d-block text-light text-center" target="_blank" href="https://www.instagram.com/">
+                                <i class="fa-brands fa-instagram rounded-circle p-3"></i>
+                            </a>
+                        </li>
+                        <li class="col-sm-2">
+                            <a class="d-block text-light text-center" target="_blank" href="https://x.com/">
+                                <i class="fa-brands fa-x-twitter rounded-circle p-3"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
