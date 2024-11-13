@@ -7,7 +7,7 @@ import { Iproduct } from '../component/interfaces/Iproduct';
   providedIn: 'root',
 })
 export class ProductService {
-  private apiUrl = 'https://egyption-treasure-89099-default-rtdb.firebaseio.com/Products.json';
+  private apiUrl = 'https://heraf-750d6-default-rtdb.firebaseio.com/Products.json';
   private productsSubject = new BehaviorSubject<Iproduct[]>([]); // Added BehaviorSubject
   products$ = this.productsSubject.asObservable(); // Observable for components to subscribe
 
@@ -26,7 +26,7 @@ export class ProductService {
   }
 
   getProducts(): Observable<any[]> {
-    const url = `https://egyption-treasure-89099-default-rtdb.firebaseio.com/Products.json`;
+    const url = `https://heraf-750d6-default-rtdb.firebaseio.com/Products.json`;
 
     return this.http.get<{ [key: string]: any }>(url).pipe(
       map(response => {
@@ -55,7 +55,7 @@ export class ProductService {
   }
 
   deleteProduct(id : string): Observable<void> {
-    const url = `https://egyption-treasure-89099-default-rtdb.firebaseio.com/Products/${id}.json`;
+    const url = `https://heraf-750d6-default-rtdb.firebaseio.com/Products/${id}.json`;
     console.log('DELETE request to:', url); // Debug log
 
     return this.http.delete<void>(url).pipe(
@@ -68,7 +68,7 @@ export class ProductService {
 
 
   updateProduct(product: Iproduct): Observable<Iproduct> {
-    const updateUrl = `https://egyption-treasure-89099-default-rtdb.firebaseio.com/Products/${product.id}.json`;
+    const updateUrl = `https://heraf-750d6-default-rtdb.firebaseio.com/Products/${product.id}.json`;
 
     return this.http.put<Iproduct>(updateUrl, product).pipe(
       map((updatedProduct) => {
@@ -89,7 +89,7 @@ export class ProductService {
     console.log('Adding product:', product); // Verify product data
 
     return this.http.post<Iproduct>(
-      'https://egyption-treasure-89099-default-rtdb.firebaseio.com/Products.json',
+      'https://heraf-750d6-default-rtdb.firebaseio.com/Products.json',
       product
     ).pipe(
       map((newProduct) => {

@@ -12,7 +12,7 @@ interface Review {
   providedIn: 'root'
 })
 export class ReviewService {
-  private baseUrl = 'https://egyption-treasure-89099-default-rtdb.firebaseio.com/Review.json';
+  private baseUrl = 'https://heraf-750d6-default-rtdb.firebaseio.com/Review.json';
 
   constructor(private http: HttpClient) {}
 
@@ -37,11 +37,11 @@ export class ReviewService {
     );
   }
   deleteReview(id: string): Observable<void> {
-    const deleteURL = `https://egyption-treasure-89099-default-rtdb.firebaseio.com/Review/${id}.json`;
+    const deleteURL = `https://heraf-750d6-default-rtdb.firebaseio.com/Review/${id}.json`;
     return this.http.delete<void>(deleteURL);
   }
   getacceptedReviews(): Observable<Review[]> {
-    const url = 'https://egyption-treasure-89099-default-rtdb.firebaseio.com/reviewafteracepted.json';
+    const url = 'https://heraf-750d6-default-rtdb.firebaseio.com/reviewafteracepted.json';
     return this.http.get<{ [key: string]: Review }>(url).pipe(
       map((responseData) => {
         const acceptedReviewsArray: Review[] = [];

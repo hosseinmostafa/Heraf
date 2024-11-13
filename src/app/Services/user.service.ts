@@ -7,7 +7,7 @@ import { BehaviorSubject, map, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  private baseURL: string = 'https://egyption-treasure-89099-default-rtdb.firebaseio.com/Users.json';
+  private baseURL: string = 'https://heraf-750d6-default-rtdb.firebaseio.com/Users.json';
   public currentUser: USERModul | null = null;
   public currentUserSubject: BehaviorSubject<USERModul | null> = new BehaviorSubject<USERModul | null>(null);
 
@@ -34,7 +34,7 @@ export class UserService {
 
   // Fetch a single user by ID from Firebase
   getUserById(userId: string): Observable<USERModul> {
-    const userUrl = `https://egyption-treasure-89099-default-rtdb.firebaseio.com/Users/${userId}.json`;
+    const userUrl = `https://heraf-750d6-default-rtdb.firebaseio.com/Users/${userId}.json`;
     return this.http.get<USERModul>(userUrl);
   }
 
@@ -50,13 +50,13 @@ export class UserService {
 
   // Delete a user by ID
   deleteUser(phone: string): Observable<void> {
-    const deleteURL = `https://egyption-treasure-89099-default-rtdb.firebaseio.com/Users/${phone}.json`;
+    const deleteURL = `https://heraf-750d6-default-rtdb.firebaseio.com/Users/${phone}.json`;
     return this.http.delete<void>(deleteURL);
   }
 
   // Update a user by ID
   updateUser(phone: string, userData: Partial<USERModul>): Observable<USERModul> {
-    const updateURL = `https://egyption-treasure-89099-default-rtdb.firebaseio.com/Users/${phone}.json`;
+    const updateURL = `https://heraf-750d6-default-rtdb.firebaseio.com/Users/${phone}.json`;
     return this.http.put<USERModul>(updateURL, userData);
   }
 
@@ -89,7 +89,7 @@ export class UserService {
   }
   updateUserRole(userId: string, role: string): Observable<any> {
     const updatePayload = { role };
-    const updateURL = `https://egyption-treasure-89099-default-rtdb.firebaseio.com/Users/${userId}.json`;
+    const updateURL = `https://heraf-750d6-default-rtdb.firebaseio.com/Users/${userId}.json`;
     return this.http.patch(updateURL, updatePayload);
   }
 }

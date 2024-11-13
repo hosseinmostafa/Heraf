@@ -24,7 +24,7 @@ export class ReviewsComponent implements OnInit {
   }
 
   rejectReview(email: string) {
-    this.http.get<{ [key: string]: any }>(`https://egyption-treasure-89099-default-rtdb.firebaseio.com/Review.json`)
+    this.http.get<{ [key: string]: any }>(`https://heraf-750d6-default-rtdb.firebaseio.com/Review.json`)
       .subscribe({
         next: (reviews) => {
           // Find the review ID by email
@@ -32,7 +32,7 @@ export class ReviewsComponent implements OnInit {
           
           if (reviewId) {
             // Delete the review by ID
-            this.http.delete(`https://egyption-treasure-89099-default-rtdb.firebaseio.com/Review/${reviewId}.json`)
+            this.http.delete(`https://heraf-750d6-default-rtdb.firebaseio.com/Review/${reviewId}.json`)
               .subscribe({
                 next: () => {
                   // Remove the deleted review from the displayed list
@@ -54,7 +54,7 @@ export class ReviewsComponent implements OnInit {
   }
   
   acceptReview(review: any) {
-    this.http.post('https://egyption-treasure-89099-default-rtdb.firebaseio.com/reviewafteracepted.json', review).subscribe({
+    this.http.post('https://heraf-750d6-default-rtdb.firebaseio.com/reviewafteracepted.json', review).subscribe({
       next: (data) => {
         console.log('Review added:', data);
       },
