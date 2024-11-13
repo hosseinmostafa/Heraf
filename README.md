@@ -113,8 +113,8 @@ This project is licensed under the **MIT License**.
 ---
 
 ## 🔗 Links  
-- **GitHub Repository**: [HERAF Repository](https://github.com/hosseinmostafa/Egyptian-Treasures.git)  
-- **HERAF Website**: [HERAF Website](https://herfa-finall.netlify.app)  
+- **GitHub Repository**: [HERAF Repository](https://github.com/hosseinmostafa/The-Egyptian-Academy-of-Computers-and-Information-and-Technology-Management--Tanta.git)  
+- **HERAF Website**: [HERAF Website](https://heraf-hand.netlify.app)  
 
 ### **LinkedIn**  
 - [Hessein Mostafa](https://www.linkedin.com/in/hessein-mostafa)
